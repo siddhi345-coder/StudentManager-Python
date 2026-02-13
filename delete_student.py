@@ -1,0 +1,15 @@
+from file_handler import load_students, save_students
+
+
+def delete_student():
+    students = load_students()
+    roll = input("Enter Roll Number to delete: ")
+
+    for student in students:
+        if student["roll"] == roll:
+            students.remove(student)
+            save_students(students)
+            print("Student deleted successfully!")
+            return
+
+    print("Student not found.")

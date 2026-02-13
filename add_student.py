@@ -6,7 +6,7 @@ def add_student():
 
     roll = input("Enter Roll Number: ")
 
-    # Check duplicate roll
+  
     for student in students:
         if student["roll"] == roll:
             print("Student with this Roll Number already exists!")
